@@ -56,6 +56,9 @@
     gap: 10px;
     align-items: center;
  }
+ .navbar__s4{
+   display: none;
+ }
 
  .mylearning {
     position: relative;
@@ -95,7 +98,6 @@
     color: white;
     padding: 6px;
     border-radius: 30px;
-    transition: transform 0.4s;
     flex-wrap: wrap;
     cursor: pointer;
     border: solid black 1px;
@@ -109,9 +111,6 @@
     background-color: transparent;
     color: #A90BB1;
     border: solid black 1px;
-   
-
-
 
  }
 
@@ -142,23 +141,15 @@
 
  }
 
- @keyframes zoom {
-    0% {
-       transform: scale(0);
-       opacity: 0;
 
-    }
-
-    100% {
-       transform: scale(1);
-       opacity: 1;
-
-    }
- }
 
  .recommended {
     padding: 30px;
 
+ }
+
+ .recommended-head {
+    padding-left: 20px;
  }
 
  .recommended__container {
@@ -170,8 +161,11 @@
  }
 
  .course-card {
-    width: 250px;
-    padding-bottom: 20px;
+    /* width: 250px;
+    padding-bottom: 20px; */
+    flex-grow: 1;
+    flex-basis: 20%;
+    margin: 20px;
 
  }
 
@@ -198,26 +192,35 @@
     padding: 10px;
     flex-grow: 1;
     flex-basis: 25%;
+    cursor: pointer;
+
 
  }
 
  .topics__container p:hover {
     background-color: #A90BB1;
     color: white;
+    transition: 1s;
+
+
  }
 
 
  .popular {
-    padding: 10px;
+    padding: 30px;
     margin: 10px;
+ }
+
+ .popular-head {
+    padding-left: 20px;
  }
 
  .popular__container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
     margin-top: 10px;
+    padding: 20px;
 
  }
 
@@ -246,4 +249,45 @@
 
  .footer__two h1 {
     color: #A90BB1;
+ }
+
+
+ @keyframes zoom {
+    0% {
+       transform: scale(0);
+       opacity: 0;
+
+    }
+
+    100% {
+       transform: scale(1);
+       opacity: 1;
+
+    }
+ }
+
+
+ @media screen and (max-width:800px) {
+
+    body {
+       font-size: 10px;
+    }
+ }
+
+ @media screen and (max-width:600px) {
+
+    .course-card {
+       flex-basis: 23%;
+    }
+    .categories{
+      display: none;
+    }
+
+    .navbar__s2, .navbar__s3{
+      display: none;
+    }
+ .navbar__s4{
+   display: block;
+ }
+
  }
